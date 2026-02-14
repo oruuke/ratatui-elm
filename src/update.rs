@@ -27,8 +27,8 @@ pub fn handle_event(_: &Model) -> color_eyre::Result<Option<Message>> {
 
 fn handle_key(key: event::KeyEvent) -> Option<Message> {
     match key.code {
-        KeyCode::Char('n') => Some(Message::Decrement),
-        KeyCode::Char('e') => Some(Message::Increment),
+        KeyCode::Down => Some(Message::Decrement),
+        KeyCode::Up => Some(Message::Increment),
         KeyCode::Char('q') => Some(Message::Quit),
         _ => None,
     }
